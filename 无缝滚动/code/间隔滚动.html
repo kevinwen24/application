@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            #container {
+                width: 600px;
+                height: 90px;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+            ul {
+                background: #eee;
+            }
+            li {
+                list-style-type: none;
+                line-height: 30px;
+                height: 30px;
+                text-indent: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <ul id="content1">
+                <li>简介：本课程简单介绍marquee标签制作简单滚动的</li>
+                <li>vscode: Visual Studio Code 常用快捷键 - 魚魚 - 博客园</li>
+                <li>VSCode 常用快捷键 - Sunny Blog - SegmentFault</li>
+                <li>快速复制当前行到上一行、下一行快捷键-CSDN论坛</li>
+                <li>通过分析滚动原理，让您知道效果实现的思路，</li>
+                <li>定时等知识的使用，运用JavaScript技术，让您掌握无缝滚动和歇间性的制作方法。</li>
+            </ul>
+            <ul id="content2"></ul>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var timer;
+        var timer2;
+        var container = document.getElementById("container");
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        content2.innerHTML = content1.innerHTML;
+
+        container.onmouseover = function(){
+            clearInterval(timer);
+            clearInterval(timer2);
+        };
+
+        container.onmouseout = function(){
+            timer = setInterval("myScroll()", 50);
+        };
+
+        function myScroll() {
+            if (container.scrollTop >= content1.offsetHeight) {
+                container.scrollTop = 0;
+            } else {
+                container.scrollTop++;
+            }
+
+            if (container.scrollTop % 30 == 0){
+                clearInterval(timer);
+                clearInterval(timer2);
+                timer2 = setTimeout(function() {
+                    timer = setInterval("myScroll()", 50);
+                }, 1000);
+            }
+        }
+        timer = setInterval("myScroll()", 50);
+    </script>
+</html>
