@@ -1,0 +1,19 @@
+
+#1.1 课程内容介绍
+理解邮件开发涉及的基本概念
+了解什么SMTP和POP3协议
+掌握配置Foxmail
+掌握javaMail发送简单邮件
+
+提供给开发者处理电子邮件的编程接口，sun定义的处理email的API
+
+SMTP（simpale mail transfer protocol）
+属于TCP、IP一族
+默认端口号25 发送邮件的协议
+
+POP3 （post office protocol - version3）
+属于TCP、IP一族 
+默认端口号的110 接收邮件的协议
+
+
+

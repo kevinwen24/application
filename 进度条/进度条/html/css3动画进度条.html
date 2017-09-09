@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+		<style type="text/css">
+			.loading {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+				background: #fff;
+			}		
+			.pic {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				/*
+				居中的两种方式
+				*/
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				/*
+				top: 50%;
+			    left: 50%;
+			    margin-left: -35px;
+			    margin-top:-35px;
+			    */
+			}	
+			.pic i {
+				float: left;
+				width: 6px;
+				height: 50px;
+				margin: 0px 2px;
+				background: #399;
+				transform: scaleY(0.4);
+				animation: load 1.2s infinite;
+			}
+		/*定义动画*/
+		@keyframes load{
+			0%,40%,100%{transform: scaleY(0.4);}
+			20%{transform: scaleY(1);}
+		}
+		.pic i:nth-child(2) {
+			animation-delay: 0.1s;
+		}
+		.pic i:nth-child(3) {
+			animation-delay: 0.2s;
+		}
+		.pic i:nth-child(4) {
+			animation-delay: 0.3s;
+		}
+		.pic i:nth-child(5) {
+			animation-delay: 0.4s;
+		}
+		/*
+		 .loading {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+				background: #fff;
+			}		
+			.pic {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+			}	
+			.pic i {
+				float: left;
+				width: 6px;
+				height: 50px;
+				margin: 0px 2px;
+				background: #399;
+				-webkit-transform: scaleY(0.4);
+				    -ms-transform: scaleY(0.4);
+				        transform: scaleY(0.4);
+				-webkit-animation: load 1.2s infinite;
+				        animation: load 1.2s infinite;
+			}
+	
+		@-webkit-keyframes load{
+			0%,40%,100%{-webkit-transform: scaleY(0.4);transform: scaleY(0.4);}
+			20%{-webkit-transform: scaleY(1);transform: scaleY(1);}
+		}
+		@keyframes load{
+			0%,40%,100%{-webkit-transform: scaleY(0.4);transform: scaleY(0.4);}
+			20%{-webkit-transform: scaleY(1);transform: scaleY(1);}
+		}
+		.pic i:nth-child(2) {
+			-webkit-animation-delay: 0.1s;
+			        animation-delay: 0.1s;
+		}
+		.pic i:nth-child(3) {
+			-webkit-animation-delay: 0.2s;
+			        animation-delay: 0.2s;
+		}
+		.pic i:nth-child(4) {
+			-webkit-animation-delay: 0.3s;
+			        animation-delay: 0.3s;
+		}
+		.pic i:nth-child(5) {
+			-webkit-animation-delay: 0.4s;
+			        animation-delay: 0.4s;
+		}
+		 
+		 * */
+		</style>
+	</head>
+	<body>
+		<div class="loading">
+			<div class="pic">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+		</div>
+		
+		<img src="../img/backDemo.jpg" width="100%" height="100%"/>
+	</body>
+	<script type="text/javascript">
+	/*$(function(){
+		setTimeout(function(){
+			$(".loading").fadeOut();
+		},1000);
+	});*/
+	</script>
+</html>

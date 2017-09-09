@@ -1,0 +1,29 @@
+1. 根据页面的内容实时的加载进度
+2. 延迟三秒然后去加载内容，第二次有了缓存，就不需要再次加载，
+所以定时器知识表象上的，不是按照实际
+3. 在线生成进度条、进度动画  
+     preloaders.net  
+     loading.io              还可以生成css
+     autoprefixer.github.io  自动加前缀，生成兼容css
+4. div居中的两种方式
+    left: 0; 
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    /*
+    top: 50%;
+    left: 50%;
+    margin-left: -35px;
+    margin-top:-35px;
+5. 通过加载状态事件制作进度条
+    【js代码属性】
+    document.onreadystatechage 页面加载状态改变的事件
+    document.readyState        返回当前文档的状态
+    加载请求过程:
+    1. uninitialized - 还未开始载入
+    2. loading       - 载入中
+    3. interactive   - 已加载，文档与用户可以开始交互
+    4. complete      - 载入完成
+6. 代码实现进度几B的文件，而图片至少都是几KB，为了加载快速
+7. 

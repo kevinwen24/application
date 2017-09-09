@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+		<style type="text/css">
+			.loading {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+				background: #fff;
+			}		
+			.pic {
+				width: 70px;
+				height: 70px;
+				position: absolute;
+				/*
+				居中的两种方式
+				*/
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				/*
+				top: 50%;
+			    left: 50%;
+			    margin-left: -35px;
+			    margin-top:-35px;
+			    */
+				background: url("../img/5.gif") no-repeat;
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="loading">
+			<div class="pic"></div>
+		</div>
+		
+		<img src="../img/backDemo.jpg" width="100%" height="100%"/>
+	</body>
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$(".loading").fadeOut();
+		},1000);
+	});
+	</script>
+</html>
