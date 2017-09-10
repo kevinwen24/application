@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#container {
+			margin: 0px auto;
+			width: 600px;
+			height: 600px;
+			border: 3px solid #eee;
+			border-radius: 5px;
+			box-shadow: 2px 2px 2px #eee;
+			background: url("images/zhangjie.jpg");
+			position: relative;
+		}
+		.control_video {
+			position: absolute;
+			top: 470px;
+			opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+		<div id="container">
+			<div class="control_video">
+				<video id="video" controls="controls">
+						<source src="music/三生三世.mp3" type="video/mp4">
+				</video>
+				<!--下面是你的控制按钮-->
+				<a href="#" onclick="p();return false;">播放</a>
+				<a href="#" onclick="s();return false;">暂停</a>
+				<a href="#" onclick="add();return false;">增大音量</a>
+				<a href="#" onclick="subc();return false;">减小音量</a>
+			</div>
+		</div>
+	
+	<!--下面是js脚本-->
+	<script>
+	    var music = document.getElementById("video");         // 获得音乐对象
+	    function p(){music.play();}                          // 开始播放
+	    function s(){music.pause();}                        // 暂停播放
+	    function add(){music.volume += 0.1;}               // 增大音量
+	    function sub(){music.volume -= 0.1;}              // 减小音量
+	    window.onload=function(){
+	    	p();
+	    }
+	</script>
+</body>
+</html>
